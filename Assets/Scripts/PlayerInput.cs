@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    private Rigidbody rb;
+    public float speed;
+    private Rigidbody _rb;
+    private float lastInput;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(Input.acceleration);
-        Debug.DrawLine(transform.position, Input.acceleration, Color.cyan);
-        rb.AddForce(Quaternion.Euler(90, 0, 0) * Input.acceleration);
+        //debug.text = Input.acceleration.ToString();
+        if (Mathf.Sign(_rb.velocity.x) != Mathf.Sign(Input.acceleration.x))
+        {
+            _rb.AddForce(new Vector3(2 * speed * Input.acceleration.x, 0, 0));
+        }
+        else
+        {
+            _rb.AddForce(new Vector3(Input.acceleration.x * speed, 0.0f, 0.0f));
+        }
+        
     }
 }

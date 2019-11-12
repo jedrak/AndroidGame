@@ -1,9 +1,8 @@
 Assembly-CSharp.csproj
 AndTest.sln
 build.apk
-.vs/AndTest/v16/.suo
-.vs/AndTest/v16/Server/sqlite3/db.lock
-.vs/AndTest/v16/Server/sqlite3/storage.ide
 Library/
 obj/
 Packages/
+Temp/
+.vs/
