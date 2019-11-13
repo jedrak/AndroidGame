@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Border
   - Obstacle
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UI
+    uniqueID: 691325849
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

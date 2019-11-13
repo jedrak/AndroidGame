@@ -9,6 +9,8 @@ public class BorderCollision : MonoBehaviour
         if (collision.gameObject.tag == "Obstacle")
         {
             Destroy(collision.gameObject);
+            //GetComponent<GameManager>().Score();
+            GameManager.Instance.Score();
         }
     }
 }
