@@ -41,9 +41,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: UI
-    uniqueID: 691325849
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 2903811219
+    locked: 0
+  - name: Obstacle
+    uniqueID: 2851424489
+    locked: 0
+  - name: Ship
+    uniqueID: 2367888503
+    locked: 0
+  - name: UI
+    uniqueID: 691325849
     locked: 0
