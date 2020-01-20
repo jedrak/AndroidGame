@@ -19,11 +19,11 @@ public class ObstacleSpawner : MonoBehaviour
         currentTime += Time.deltaTime;
         if (currentTime > _nextObstacleIn)
         {
-            float obstacleX = Random.Range(-1.6f, 1.6f);
+            float obstacleX = Random.Range(-1.5f, 1.5f);
             GameObject go = Instantiate(
                 obstacle,
                 new Vector3( obstacleX, transform.position.y),
-                Quaternion.Euler(-90, 0, 0),
+                Quaternion.Euler(90, 0, 0),
                 transform
                 );
             go.GetComponent<ObstacleMove>().speed = Random.Range(2.0f, 6.0f);

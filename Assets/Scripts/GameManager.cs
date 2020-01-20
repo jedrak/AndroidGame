@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject startPage;
     public GameObject gamePage; 
     public GameObject gameOverPage;
+    public GameObject player;
 
     public Text scoreText;
     public Text gameOverScoreText;
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
         GetComponent<ObstacleSpawner>().enabled = false;
         SetPageState(PageState.Start);
         scoreText.text = "Score:\n0";
+        
     }
 
     private void Awake()
@@ -90,6 +92,7 @@ public class GameManager : MonoBehaviour
     {
         SetPageState(PageState.Game);
         GetComponent<ObstacleSpawner>().enabled = true;
+        Instantiate(player, new Vector3(0.0f, 10, -14), Quaternion.Euler(-90.0f, 0.0f, 90.0f), transform);
     }
 
 }
