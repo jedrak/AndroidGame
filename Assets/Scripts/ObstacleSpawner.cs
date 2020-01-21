@@ -22,8 +22,8 @@ public class ObstacleSpawner : MonoBehaviour
             float obstacleX = Random.Range(-1.5f, 1.5f);
             GameObject go = Instantiate(
                 obstacle,
-                new Vector3( obstacleX, transform.position.y),
-                Quaternion.Euler(180, 0, 0),
+                new Vector3( obstacleX, transform.position.y + 0.5f),
+                Quaternion.identity,
                 transform
                 );
             go.GetComponent<ObstacleMove>().speed = Random.Range(2.0f, 6.0f);
