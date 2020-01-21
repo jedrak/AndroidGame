@@ -22,13 +22,10 @@ public class PlayerInput : MonoBehaviour
         if (Mathf.Sign(_rb.velocity.x) != Mathf.Sign(Input.acceleration.x))
         {
             _rb.AddForce(new Vector3(2 * speed * Input.acceleration.x, 0, 0));
-            _playerMoved = true;
         }
         else
         {
             _rb.AddForce(new Vector3(Input.acceleration.x * speed, 0.0f, 0.0f));
-            _playerMoved = true;
         }
-        if(_playerMoved) transform.Rotate(new Vector3(transform.position.x * 10, 0, 0));
     }
 }

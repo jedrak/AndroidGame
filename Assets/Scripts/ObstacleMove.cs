@@ -11,12 +11,12 @@ public class ObstacleMove : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
-        _rb.velocity = new Vector3(0.0f, -speed);
+        _rb.velocity = new Vector3(0.0f, -.0f, -speed);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        _rb.velocity = new Vector3(0.0f, -speed);
+        _rb.velocity = new Vector3(0.0f, .0f, -speed);
     }
 }
