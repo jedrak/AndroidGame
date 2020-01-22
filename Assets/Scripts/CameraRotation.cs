@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class CameraRotation : MonoBehaviour
 {
+    private int rot;
+    private void Start()
+    {
+        rot = 0;
+    }
     public void RotateLeft()
     {
         //GetComponentInChildren<Animator>().SetTrigger("Left");
         //GetComponent<Animator>().ResetTrigger("Left");
-        GetComponent<Animator>().SetTrigger("Left");
+        rot++;
+        if (rot > 3) rot = 0;
+        GetComponent<Animator>().SetInteger("Direction", rot);
     }
 
     public void RotateRight()
     {
-        //GetComponent<Animator>().ResetTrigger("Right");
-        GetComponent<Animator>().SetTrigger("Right");
+        rot--;
+        if (rot < 0) rot = 3;
+        GetComponent<Animator>().SetInteger("Direction", rot);
     }
 
-    public bool getLeft()
+    public int getRot()
     {
-        return GetComponent<Animator>().GetBool("Left");
-    }
-
-    public bool getRight()
-    {
-        return GetComponent<Animator>().GetBool("Right");
+        return rot;
     }
 }
