@@ -5,6 +5,7 @@ using UnityEngine;
 public class Compass : MonoBehaviour {
     private Vector2 startTouchPosition, endTouchPosition;
 
+
     // Update is called once per frame
     private void Update()
     {
@@ -16,10 +17,17 @@ public class Compass : MonoBehaviour {
             endTouchPosition = Input.GetTouch(0).position;
 
             if ((endTouchPosition.x < startTouchPosition.x) && transform.position.x > -1.75f)
+            {
                 transform.Rotate(Vector3.forward * -90);
+                //playerAnimator.SetTrigger("ChangeLeft");
+            }
+
 
             if ((endTouchPosition.x > startTouchPosition.x) && transform.position.x < 1.75f)
+            {
                 transform.Rotate(Vector3.forward * 90);
+                //playerAnimator.SetTrigger("ChangeRight");
+            }
         }
     }
 }

@@ -91,8 +91,9 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SetPageState(PageState.Game);
-        GetComponent<ObstacleSpawner>().enabled = true;
-        Instantiate(player, new Vector3(0.0f, 10, -14), Quaternion.Euler(-90.0f, 0.0f, 90.0f), transform);
+        //GetComponent<ObstacleSpawner>().enabled = true;
+        Transform t = GetComponentInChildren<CameraRotation>().transform;
+        Instantiate(player, new Vector3(0.0f, 10, -14), Quaternion.Euler(90.0f, 0.0f, 0.0f), t);
     }
 
 }
