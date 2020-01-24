@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject gamePage; 
     public GameObject gameOverPage;
     public GameObject player;
+    public GameObject spawners;
 
     public Text scoreText;
     public Text gameOverScoreText;
@@ -23,17 +24,22 @@ public class GameManager : MonoBehaviour
         GameOver
     }
 
-    int score = 0;
+    private int[] score;
     bool _gameOver = false;
 
     private void Start()
     {
-        GetComponent<ObstacleSpawner>().enabled = false;
+        score = new int[4];
+        //GetComponentInChildren<ObstacleSpawner>().enabled = false;
         SetPageState(PageState.Start);
-        scoreText.text = "Score:\n0";
+        //scoreText.text = "Score:\n" + "N: " + score[0].ToString() + "\n" + "E: " + score[1].ToString() + "\n" + "S: " + score[2].ToString() + "\n" + "W: " + score[3].ToString(); ;
         
     }
 
+    public int getWholeScore()
+    {
+        return score[0] + score[1] + score[2] + score[3];
+    }
     private void Awake()
     {
         Instance = this;
@@ -43,14 +49,13 @@ public class GameManager : MonoBehaviour
     {
         _gameOver = true;
         int savedScore = PlayerPrefs.GetInt("HighScore");
-        if (score > savedScore)
+        if (getWholeScore() > savedScore)
         {
-            PlayerPrefs.SetInt("HighScore", score);
+            PlayerPrefs.SetInt("HighScore", getWholeScore());
         }
-
         SetPageState(PageState.GameOver);
-        gameOverScoreText.text = "Score: " + score.ToString();
-        GetComponent<ObstacleSpawner>().enabled = false;
+        gameOverScoreText.text = "Score: " + getWholeScore().ToString();
+        spawners.SetActive(true);
     }
 
     public void Restart()
@@ -58,12 +63,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Score()
+    public void Score(int dir)
     {
         if(!_gameOver)
         {
-            score++;
-            scoreText.text = "Score:\n" + score.ToString();
+            score[dir]++;
+            scoreText.text = "Score:\n" + "N: " + score[0].ToString() + "\n" + "E: " + score[1].ToString() + "\n" + "S: " + score[2].ToString() + "\n" + "W: " + score[3].ToString();
         }
     }
 
@@ -91,9 +96,9 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SetPageState(PageState.Game);
-        //GetComponent<ObstacleSpawner>().enabled = true;
+        spawners.SetActive(true);
         Transform t = GetComponentInChildren<CameraRotation>().transform;
-        Instantiate(player, new Vector3(0.0f, 10, -14), Quaternion.Euler(90.0f, 0.0f, 0.0f), t);
+        Instantiate(player, new Vector3(0.0f, 10, -13), Quaternion.Euler(90.0f, 0.0f, 0.0f), t);
     }
 
 }

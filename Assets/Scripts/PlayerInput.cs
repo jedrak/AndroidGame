@@ -26,7 +26,7 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        debug.text = transform.rotation.eulerAngles + " " + camera.getRot();
+        debug.text = " ";//transform.rotation.eulerAngles + " " + camera.getRot();
         if (Mathf.Sign(_rb.velocity.x) != Mathf.Sign(Input.acceleration.x))
         {
             if(transform.rotation.eulerAngles.y == 0)

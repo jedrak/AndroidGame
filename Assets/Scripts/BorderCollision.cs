@@ -10,7 +10,9 @@ public class BorderCollision : MonoBehaviour
         {
             Destroy(collision.gameObject);
             //GetComponent<GameManager>().Score();
-            GameManager.Instance.Score();
+
+            GameManager.Instance.Score((int)transform.parent.rotation.eulerAngles.y/90);
+
         }
     }
 }
