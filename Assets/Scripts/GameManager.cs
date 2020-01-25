@@ -53,6 +53,10 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("HighScore", getWholeScore());
         }
+        PlayerPrefs.SetInt("N", score[0] + PlayerPrefs.GetInt("N"));
+        PlayerPrefs.SetInt("E", score[1] + PlayerPrefs.GetInt("E"));
+        PlayerPrefs.SetInt("S", score[2] + PlayerPrefs.GetInt("S"));
+        PlayerPrefs.SetInt("W", score[3] + PlayerPrefs.GetInt("W"));
         SetPageState(PageState.GameOver);
         gameOverScoreText.text = "Score: " + getWholeScore().ToString();
         spawners.SetActive(true);
@@ -63,6 +67,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void LoadUpgrade()
+    {
+        SceneManager.LoadScene("UpgradeScene");
+    }
     public void Score(int dir)
     {
         if(!_gameOver)

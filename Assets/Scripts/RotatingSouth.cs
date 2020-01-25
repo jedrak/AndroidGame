@@ -5,12 +5,12 @@ using UnityEngine;
 public class RotatingSouth : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        Debug.Log(animator.GetCurrentAnimatorClipInfo(0).ToString());
+    // public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+        //Debug.Log(animator.GetCurrentAnimatorClipInfo(0).ToString());
         
 
-    }
+    //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
