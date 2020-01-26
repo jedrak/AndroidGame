@@ -25,10 +25,10 @@ public class UpgradeSceneManager : MonoBehaviour
 
     private void Update()
     {
-        buttons[0].interactable = PlayerPrefs.GetInt("N") >= PlayerPrefs.GetInt("Nlvl") * 100 + 100;
+        buttons[0].interactable = PlayerPrefs.GetInt("N") >= PlayerPrefs.GetInt("Nlvl") * 100 + 100 && PlayerPrefs.GetInt("Nlvl") < 5;
         buttons[1].interactable = PlayerPrefs.GetInt("E") >= PlayerPrefs.GetInt("Elvl") * 100 + 100;
-        buttons[2].interactable = PlayerPrefs.GetInt("S") >= PlayerPrefs.GetInt("Slvl") * 100 + 100;
-        buttons[3].interactable = PlayerPrefs.GetInt("W") >= PlayerPrefs.GetInt("Wlvl") * 100 + 100;
+        buttons[2].interactable = PlayerPrefs.GetInt("S") >= PlayerPrefs.GetInt("Slvl") * 100 + 100 && PlayerPrefs.GetInt("Slvl") < 3;
+        buttons[3].interactable = PlayerPrefs.GetInt("W") >= PlayerPrefs.GetInt("Wlvl") * 100 + 100 && PlayerPrefs.GetInt("Wlvl") < 5;
         Debug.Log(PlayerPrefs.GetInt("Slvl") * 100 + 100);
     }
 

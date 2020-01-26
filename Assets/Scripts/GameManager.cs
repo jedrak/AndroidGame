@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         score = new int[4];
         //GetComponentInChildren<ObstacleSpawner>().enabled = false;
         SetPageState(PageState.Start);
