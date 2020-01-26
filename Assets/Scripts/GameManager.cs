@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
+
+
     public void gameOver()
     {
         _gameOver = true;
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
     {
         if(!_gameOver)
         {
-            score[dir]++;
+            score[dir] += PlayerPrefs.GetInt("Elvl")+1;
             scoreText.text = "Score:\n" + "N: " + score[0].ToString() + "\n" + "E: " + score[1].ToString() + "\n" + "S: " + score[2].ToString() + "\n" + "W: " + score[3].ToString();
         }
     }

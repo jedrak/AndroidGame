@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6278487366110098419}
   - component: {fileID: 5638978210801593209}
   m_Layer: 5
-  m_Name: EBuy (1)
+  m_Name: SBuy
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ RectTransform:
   m_Children:
   - {fileID: 8168140582751324452}
   m_Father: {fileID: 3561514116937548699}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 2920631059449572508}
   - component: {fileID: 1699356432409478766}
   m_Layer: 5
-  m_Name: WBuy (1)
+  m_Name: EBuy
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,7 @@ RectTransform:
   m_Children:
   - {fileID: 7339430256958367629}
   m_Father: {fileID: 3561514116937548699}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -367,7 +367,7 @@ RectTransform:
   m_LocalScale: {x: 0.279055, y: 0.279055, z: 0.279055}
   m_Children: []
   m_Father: {fileID: 3561514116937548699}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 8715609992404938923}
   - component: {fileID: 6936107062782255576}
   m_Layer: 5
-  m_Name: EBuy
+  m_Name: WBuy
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,7 +683,7 @@ RectTransform:
   m_Children:
   - {fileID: 3925459149329274746}
   m_Father: {fileID: 3561514116937548699}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -810,7 +810,7 @@ RectTransform:
   m_LocalScale: {x: 0.279055, y: 0.279055, z: 0.279055}
   m_Children: []
   m_Father: {fileID: 3561514116937548699}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 6162465291390282322}
   - component: {fileID: 4004924422312352049}
   m_Layer: 5
-  m_Name: WBuy
+  m_Name: NBuy
   m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1100,14 +1100,14 @@ Transform:
   m_LocalPosition: {x: 624, y: 0, z: 0}
   m_LocalScale: {x: 3.585434, y: 3.585434, z: 3.585434}
   m_Children:
-  - {fileID: 9059874875669311459}
   - {fileID: 7851824270347385853}
   - {fileID: 2645514718042232868}
+  - {fileID: 9059874875669311459}
   - {fileID: 5334079993548988381}
   - {fileID: 6864935770093540615}
-  - {fileID: 2301182815824330977}
   - {fileID: 6044273303245881235}
   - {fileID: 8344696000296918982}
+  - {fileID: 2301182815824330977}
   m_Father: {fileID: 9059874874710430134}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1448,7 +1448,7 @@ RectTransform:
   m_LocalScale: {x: 0.279055, y: 0.279055, z: 0.279055}
   m_Children: []
   m_Father: {fileID: 3561514116937548699}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}

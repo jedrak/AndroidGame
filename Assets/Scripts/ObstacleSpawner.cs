@@ -30,6 +30,7 @@ public class ObstacleSpawner : MonoBehaviour
                 transform.rotation,
                 transform
                 );
+                go.transform.localScale = new Vector3(go.transform.localScale.x/(PlayerPrefs.GetInt("Slvl")+1), go.transform.localScale.y / (PlayerPrefs.GetInt("Slvl") + 1), go.transform.localScale.z / (PlayerPrefs.GetInt("Slvl") + 1));
             }
             else
             {
@@ -39,9 +40,10 @@ public class ObstacleSpawner : MonoBehaviour
                 transform.rotation,
                 transform
                 );
+                go.transform.localScale = new Vector3(go.transform.localScale.x / (PlayerPrefs.GetInt("Slvl") + 1), go.transform.localScale.y / (PlayerPrefs.GetInt("Slvl") + 1), go.transform.localScale.z / (PlayerPrefs.GetInt("Slvl") + 1));
             }
            
-            go.GetComponent<ObstacleMove>().speed = Random.Range(2.0f, 6.0f);
+            go.GetComponent<ObstacleMove>().speed = Random.Range(1.0f, 20.0f) / (PlayerPrefs.GetInt("Wlvl")+1);
             go.GetComponent<ObstacleMove>().dir = direction;
             currentTime = 0;
             _nextObstacleIn = Random.Range(1.0f, 2.0f);
